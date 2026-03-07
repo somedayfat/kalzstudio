@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TB XYZ Supplier | Supplier Bahan Bangunan B2B</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f4f4f5; color: #18181b; }
+    h1, h2, h3, .heading-font { font-family: 'Teko', sans-serif; text-transform: uppercase; }
+    .bg-industrial { background-color: #27272a; }
+    .text-industrial { color: #27272a; }
+    .bg-safety { background-color: #facc15; } /* Yellow */
+    .text-safety { color: #eab308; }
+    .border-safety { border-color: #facc15; }
+    
+    .floating-badge { position: fixed; bottom: 20px; right: 20px; background: #27272a; color: white; padding: 10px 20px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 50; display: flex; align-items: center; gap: 8px; border-left: 4px solid #facc15; }
+    
+    /* Diagonal stripes pattern */
+    .bg-stripes {
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0,0,0,0.03),
+        rgba(0,0,0,0.03) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+    .bg-stripes-dark {
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(250,204,21,0.1),
+        rgba(250,204,21,0.1) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-yellow-400 selection:text-zinc-900">
+
+  <!-- Topbar B2B Info -->
+  <div class="bg-zinc-900 text-zinc-400 text-xs py-2 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6 font-medium">
+        <span class="flex items-center gap-1.5"><span class="text-safety">✓</span> PT Resmi Terdaftar</span>
+        <span class="flex items-center gap-1.5"><span class="text-safety">✓</span> Faktur Pajak (PPN)</span>
+        <span class="flex items-center gap-1.5"><span class="text-safety">✓</span> Term of Payment (TOP)</span>
+      </div>
+      <div class="flex gap-4">
+        <span>CS Proyek: 0811-2222-3333</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- Rugged Logo -->
+        <div class="w-12 h-12 bg-industrial flex items-center justify-center border-b-4 border-safety transform -skew-x-6">
+          <span class="heading-font text-white text-3xl font-bold mt-1">TB</span>
+        </div>
+        <div class="leading-tight">
+          <div class="heading-font text-3xl font-bold tracking-wide text-zinc-800 h-6">XYZ <span class="text-safety">SUPPLIER</span></div>
+          <div class="text-[0.65rem] text-zinc-500 uppercase font-bold tracking-[0.15em] mt-1">Material Konstruksi B2B</div>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-bold text-zinc-600 uppercase tracking-wider">
+        <a href="#" class="text-zinc-900 border-b-2 border-safety pb-1">Company</a>
+        <a href="#" class="hover:text-industrial transition pb-1">Katalog Produk</a>
+        <a href="#" class="hover:text-industrial transition pb-1">Armada</a>
+        <a href="#" class="hover:text-industrial transition pb-1">Cara Order</a>
+      </div>
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#" class="text-sm font-bold text-zinc-700 hover:text-safety transition">Login Mitra</a>
+        <a href="#po" class="bg-safety hover:bg-yellow-500 text-zinc-900 px-6 py-2.5 font-bold text-sm transition uppercase tracking-wider transform -skew-x-6">
+          <span class="inline-block transform skew-x-6">Request PO</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative bg-zinc-900 overflow-hidden">
+    <div class="absolute inset-0 bg-stripes-dark z-0 opacity-20"></div>
+    <div class="absolute inset-y-0 right-0 w-1/2 bg-[url('assets/img/b2b-hero.jpg')] bg-cover bg-center opacity-40 md:opacity-100 md:clip-path-slant z-0" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/90 to-transparent z-10 hidden md:block"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 relative z-20">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 bg-zinc-800 text-safety font-bold text-xs uppercase tracking-widest px-4 py-2 mb-6 border-l-2 border-safety">
+          Mitra Kontraktor & Developer
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold text-white leading-[0.9] mb-6 heading-font">
+          Pasokan Material <span class="text-safety block mt-2">Tepat Waktu & Volume.</span>
+        </h1>
+        <p class="text-lg text-zinc-400 mb-10 leading-relaxed font-medium">
+          TB XYZ Supplier melayani pengadaan besi beton, semen, pasir, dan bata ringan untuk proyek skala menengah hingga besar. Dengan dukungan armada sendiri, kami pastikan jadwal proyek Anda aman.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <a href="#po" class="bg-safety hover:bg-yellow-500 text-zinc-900 px-8 py-4 font-bold transition text-center uppercase tracking-wider text-sm flex items-center justify-center gap-2 border-2 border-safety">
+            Kirim Daftar Kebutuhan (RAB)
+          </a>
+          <a href="#" class="bg-transparent hover:bg-zinc-800 text-white px-8 py-4 font-bold transition text-center uppercase tracking-wider text-sm border-2 border-zinc-600">
+            Download Company Profile
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 border-t border-zinc-800 pt-8">
+          <div>
+            <div class="heading-font text-4xl text-safety mb-1">50+</div>
+            <div class="text-xs text-zinc-400 uppercase font-bold tracking-wider">Armada Truk</div>
+          </div>
+          <div>
+            <div class="heading-font text-4xl text-safety mb-1">10rb+</div>
+            <div class="text-xs text-zinc-400 uppercase font-bold tracking-wider">Ton Besi Tersalurkan</div>
+          </div>
+          <div>
+            <div class="heading-font text-4xl text-safety mb-1">200+</div>
+            <div class="text-xs text-zinc-400 uppercase font-bold tracking-wider">Mitra PT & CV</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Core Commodities -->
+  <section class="py-24 max-w-7xl mx-auto px-6 bg-stripes">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div class="max-w-2xl">
+        <div class="text-industrial font-bold tracking-widest text-sm uppercase mb-3 border-l-4 border-safety pl-3 text-zinc-500">Katalog Utama</div>
+        <h2 class="text-4xl md:text-5xl font-bold text-zinc-900 mb-4 heading-font">Komoditas <span class="text-zinc-500">Proyek</span></h2>
+        <p class="text-zinc-600 font-medium">Spesialisasi kami pada material struktur dasar bangunan dengan harga kompetitif dan ketersediaan stok skala besar (gudang 5000m²).</p>
+      </div>
+      <a href="#" class="bg-zinc-900 text-white font-bold text-sm uppercase tracking-wider px-6 py-3 hover:bg-zinc-800 transition shrink-0">
+        Lihat Full Katalog
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <!-- Item -->
+      <div class="bg-white border border-zinc-200 group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="assets/img/b2b-1.jpg" alt="Besi Beton" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 grayscale group-hover:grayscale-0">
+          <div class="absolute top-0 right-0 bg-safety text-zinc-900 text-xs font-bold px-3 py-1 uppercase tracking-wider">SNI Certified</div>
+        </div>
+        <div class="p-6">
+          <h3 class="heading-font text-2xl font-bold text-zinc-900 mb-2">Besi Beton & Baja</h3>
+          <p class="text-zinc-500 text-sm mb-4">Besi polos, ulir, wiremesh, baja ringan (canal C, reng), WF, H-Beam standar SNI pabrik besar.</p>
+          <div class="text-zinc-900 font-bold border-t border-zinc-100 pt-4 flex justify-between items-center text-sm">
+            <span>Partai Besar/Kecil</span>
+            <span class="text-safety">➔</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item -->
+      <div class="bg-white border border-zinc-200 group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="assets/img/b2b-2.jpg" alt="Semen" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 grayscale group-hover:grayscale-0">
+        </div>
+        <div class="p-6">
+          <h3 class="heading-font text-2xl font-bold text-zinc-900 mb-2">Semen & Mortar</h3>
+          <p class="text-zinc-500 text-sm mb-4">Distributor resmi semen Tiga Roda, Gresik, Dynamix, dan berbagai jenis semen instan (mortar).</p>
+          <div class="text-zinc-900 font-bold border-t border-zinc-100 pt-4 flex justify-between items-center text-sm">
+            <span>DO Pabrik / Gudang</span>
+            <span class="text-safety">➔</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item -->
+      <div class="bg-white border border-zinc-200 group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="assets/img/b2b-3.jpg" alt="Bata Ringan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 grayscale group-hover:grayscale-0">
+        </div>
+        <div class="p-6">
+          <h3 class="heading-font text-2xl font-bold text-zinc-900 mb-2">Bata Ringan (Hebel)</h3>
+          <p class="text-zinc-500 text-sm mb-4">Supply bata ringan berbagai merk (Citicon, Grand Elephant, dll) kualitas proyek presisi.</p>
+          <div class="text-zinc-900 font-bold border-t border-zinc-100 pt-4 flex justify-between items-center text-sm">
+            <span>Min. Order 10.8m³</span>
+            <span class="text-safety">➔</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="bg-white border border-zinc-200 group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="assets/img/b2b-4.jpg" alt="Pasir Batu" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 grayscale group-hover:grayscale-0">
+        </div>
+        <div class="p-6">
+          <h3 class="heading-font text-2xl font-bold text-zinc-900 mb-2">Alam (Pasir/Batu)</h3>
+          <p class="text-zinc-500 text-sm mb-4">Sirtu, pasir lumajang, split cor, makadam. Dikirim langsung dari tambang menggunakan dump truck.</p>
+          <div class="text-zinc-900 font-bold border-t border-zinc-100 pt-4 flex justify-between items-center text-sm">
+            <span>Armada Dump Truck</span>
+            <span class="text-safety">➔</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Props B2B -->
+  <section class="py-20 bg-zinc-900 text-zinc-300">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="flex flex-col">
+          <div class="w-14 h-14 bg-zinc-800 flex items-center justify-center text-3xl mb-6 border border-zinc-700">🚚</div>
+          <h4 class="text-white font-bold text-lg mb-3 uppercase tracking-wider">Armada Pribadi (In-House)</h4>
+          <p class="text-sm leading-relaxed">Kami tidak bergantung pada pihak ketiga. Dengan armada pick-up, engkel, hingga tronton sendiri, pengiriman lebih bisa diandalkan ketepatan waktunya.</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="w-14 h-14 bg-zinc-800 flex items-center justify-center text-3xl mb-6 border border-zinc-700">💳</div>
+          <h4 class="text-white font-bold text-lg mb-3 uppercase tracking-wider">Term of Payment (Tempo)</h4>
+          <p class="text-sm leading-relaxed">Memahami arus kas kontraktor, kami melayani sistem pembayaran TOP (14 Hari - 45 Hari) untuk perusahaan (PT/CV) yang telah melewati proses verifikasi kredit.</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="w-14 h-14 bg-zinc-800 flex items-center justify-center text-3xl mb-6 border border-zinc-700">📑</div>
+          <h4 class="text-white font-bold text-lg mb-3 uppercase tracking-wider">Legalitas & PPN 11%</h4>
+          <p class="text-sm leading-relaxed">Perusahaan PKP resmi. Seluruh transaksi material dapat kami terbitkan Faktur Pajak standar untuk keperluan administrasi perpajakan proyek Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request PO Form -->
+  <section id="po" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="bg-white border-4 border-zinc-900 p-2 md:p-4 shadow-[10px_10px_0px_#facc15]">
+      <div class="border-2 border-dashed border-zinc-300 p-8 md:p-12">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl md:text-5xl font-bold text-zinc-900 mb-2 heading-font">Request Quotation (Penawaran)</h2>
+          <p class="text-zinc-600 font-medium">Isi form di bawah atau kirim RAB Anda ke email kami untuk mendapatkan harga netto.</p>
+        </div>
+
+        <form class="max-w-4xl mx-auto space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-zinc-900 uppercase tracking-wider mb-2">Nama Perusahaan (PT/CV)</label>
+              <input type="text" class="w-full bg-zinc-50 border border-zinc-300 p-3 focus:outline-none focus:border-safety focus:ring-1 focus:ring-safety" placeholder="Contoh: PT Konstruksi Indonesia">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-zinc-900 uppercase tracking-wider mb-2">Nama PIC & Jabatan</label>
+              <input type="text" class="w-full bg-zinc-50 border border-zinc-300 p-3 focus:outline-none focus:border-safety focus:ring-1 focus:ring-safety" placeholder="Contoh: Budi (Purchasing)">
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-zinc-900 uppercase tracking-wider mb-2">Kontak (WA Aktif)</label>
+              <input type="tel" class="w-full bg-zinc-50 border border-zinc-300 p-3 focus:outline-none focus:border-safety focus:ring-1 focus:ring-safety" placeholder="0812-xxxx-xxxx">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-zinc-900 uppercase tracking-wider mb-2">Lokasi Proyek (Tujuan Kirim)</label>
+              <input type="text" class="w-full bg-zinc-50 border border-zinc-300 p-3 focus:outline-none focus:border-safety focus:ring-1 focus:ring-safety" placeholder="Contoh: Cikarang Pusat">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-zinc-900 uppercase tracking-wider mb-2">Daftar Kebutuhan Material & Volume</label>
+            <textarea rows="4" class="w-full bg-zinc-50 border border-zinc-300 p-3 focus:outline-none focus:border-safety focus:ring-1 focus:ring-safety" placeholder="1. Besi Beton Polos 10mm (CS) - 500 Batang&#10;2. Semen Tiga Roda 40kg - 200 Sak..."></textarea>
+          </div>
+
+          <div class="flex items-center gap-2 text-sm text-zinc-600 mb-4">
+            <input type="checkbox" id="ppn" class="w-4 h-4 text-safety focus:ring-safety border-zinc-300">
+            <label for="ppn" class="font-medium">Centang jika ini proyek dengan kebutuhan Faktur Pajak (PPN)</label>
+          </div>
+
+          <button type="button" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-lg uppercase tracking-wider py-4 mt-4 transition">
+            Kirim Permintaan Harga
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-zinc-400 border-t-8 border-safety pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
+      <div class="md:col-span-2">
+         <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-zinc-800 flex items-center justify-center border-b-2 border-safety">
+            <span class="heading-font text-white text-2xl font-bold mt-1">TB</span>
+          </div>
+          <span class="font-bold tracking-widest text-white text-xl heading-font mt-1">XYZ SUPPLIER</span>
+        </div>
+        <p class="leading-relaxed mb-6 max-w-sm text-sm font-medium">Mitra rantai pasok material konstruksi B2B terpercaya. Membangun infrastruktur bersama dengan jaminan suplai yang konstan.</p>
+        <div class="flex gap-4">
+           <!-- Social boxes -->
+           <a href="#" class="w-8 h-8 bg-zinc-800 flex items-center justify-center hover:bg-safety hover:text-zinc-900 transition">in</a>
+           <a href="#" class="w-8 h-8 bg-zinc-800 flex items-center justify-center hover:bg-safety hover:text-zinc-900 transition">fb</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wider uppercase text-xs">Informasi</h4>
+        <ul class="space-y-3 text-sm font-medium">
+          <li><a href="#" class="hover:text-safety transition">Company Profile</a></li>
+          <li><a href="#" class="hover:text-safety transition">Katalog Produk PDF</a></li>
+          <li><a href="#" class="hover:text-safety transition">Syarat & Ketentuan TOP</a></li>
+          <li><a href="#" class="hover:text-safety transition">Karir / Lowongan (Sopir)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wider uppercase text-xs">Area Cakupan Utama</h4>
+        <ul class="space-y-3 text-sm font-medium">
+          <li>Kawasan Industri Cikarang (Jababeka, EJIP, Delta Silicon)</li>
+          <li>Kawasan Industri Karawang (KIIC, Suryacipta)</li>
+          <li>Bekasi & Jakarta Timur</li>
+          <li class="pt-2 text-safety opacity-80 text-xs italic">*Luar kota hubungi CS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-wider">
+      <div>
+        &copy; 2026 PT Distribusi Material XYZ. All rights reserved.
+      </div>
+      <div>
+        Setup & design by Kalz Studio.
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-badge">
+    <div class="w-2.5 h-2.5 rounded-full bg-safety animate-pulse"></div>
+    <span>Live Theme B2B Demo</span>
+  </div>
+</body>
+</html>

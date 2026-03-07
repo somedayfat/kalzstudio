@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV XYZ Print | Pusat Percetakan Digital & Offset</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      color: #111827;
+    }
+
+    h1,
+    h2,
+    h3,
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* CMYK brand colors */
+    .bg-cyan {
+      background-color: #00AEEF;
+    }
+
+    .text-cyan {
+      color: #00AEEF;
+    }
+
+    .bg-magenta {
+      background-color: #EC008C;
+    }
+
+    .text-magenta {
+      color: #EC008C;
+    }
+
+    .bg-yellow-brand {
+      background-color: #FFF200;
+    }
+
+    .text-yellow-brand {
+      color: #FFF200;
+    }
+
+    .border-magenta {
+      border-color: #EC008C;
+    }
+
+    .floating-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .cmyk-shadow {
+      box-shadow:
+        3px 3px 0 0 rgba(0, 174, 239, 0.8),
+        6px 6px 0 0 rgba(236, 0, 140, 0.8),
+        9px 9px 0 0 rgba(255, 242, 0, 0.8);
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-[#EC008C] selection:text-white">
+
+  <!-- Promo Topbar -->
+  <div class="bg-gray-900 text-white text-xs font-semibold tracking-wider text-center py-2 h-auto hidden sm:block">
+    <span class="text-cyan">PROMO:</span> DISKON 20% UNTUK CETAK BROSUR MIN 10 RIM BULAN INI! 🎉
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- CMYK Logo abstract -->
+        <div class="flex -space-x-2">
+          <div
+            class="w-8 h-8 rounded-full bg-cyan mix-blend-multiply flex items-center justify-center font-bold text-white text-xs">
+            C</div>
+          <div
+            class="w-8 h-8 rounded-full bg-magenta mix-blend-multiply flex items-center justify-center font-bold text-white text-xs">
+            M</div>
+          <div
+            class="w-8 h-8 rounded-full bg-yellow-brand mix-blend-multiply flex items-center justify-center font-bold text-gray-900 text-xs">
+            Y</div>
+        </div>
+        <div class="leading-tight ml-2">
+          <div class="heading-font text-xl font-bold tracking-tight text-gray-900">CV XYZ <span
+              class="text-magenta">PRINT</span></div>
+          <div class="text-[0.6rem] text-gray-500 uppercase font-semibold tracking-widest">Digital & Offset</div>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
+        <a href="#" class="text-magenta transition">Layanan</a>
+        <a href="#" class="hover:text-cyan transition">Produk Custom</a>
+        <a href="#" class="hover:text-cyan transition">Cara Order</a>
+        <a href="#" class="hover:text-cyan transition">Testimoni</a>
+      </div>
+      <a href="#"
+        class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2.5 rounded font-bold text-sm transition flex items-center gap-2">
+        Kirim File / Order
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero with modern expressive feel -->
+  <header class="relative bg-white overflow-hidden pt-12 pb-24 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div class="order-2 md:order-1 relative">
+        <div
+          class="absolute -inset-4 bg-gradient-to-r from-cyan/20 via-magenta/20 to-yellow-brand/20 blur-2xl z-0 rounded-full">
+        </div>
+        <img src="assets/img/print-hero.jpg" alt="Printing Press"
+          class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-video border border-gray-100">
+
+        <!-- Floating Elements -->
+        <div
+          class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg z-20 cmyk-shadow border border-gray-100 transform rotate-3">
+          <div class="font-bold text-gray-900 heading-font text-lg leading-tight mb-1">Cetak<br>Cepat!</div>
+          <div class="text-xs text-gray-500">Bisa Ditunggu*</div>
+        </div>
+      </div>
+
+      <div class="order-1 md:order-2">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1] mb-6 heading-font">
+          Wujudkan Ide Kamu Dalam <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan via-magenta to-gray-900">Cetakan
+            Nyata.</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
+          Dari kartu nama elegan, <i>packaging</i> produk UMKM, hingga cetak stiker skala besar. CV XYZ Print memberikan
+          hasil tajam, warna presisi, dan selesai tepat waktu.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#"
+            class="bg-magenta text-white px-8 py-3.5 rounded font-bold transition hover:opacity-90 flex items-center justify-center">
+            Pesan Sekarang
+          </a>
+          <a href="#"
+            class="bg-white text-gray-700 px-8 py-3.5 rounded font-bold transition border-2 border-gray-200 hover:border-cyan hover:text-cyan text-center">
+            Lihat Katalog Harga
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm font-semibold text-gray-500">
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-cyan inline-block"></div> Mesin Terbaru
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-magenta inline-block"></div> Custom Design
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-yellow-brand inline-block"></div> Free Ongkir*
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services / Products -->
+  <section class="py-24 max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 heading-font">Apa Yang Mau Dicetak Hari Ini?</h2>
+        <p class="text-gray-600">Melayani ecer maupun partai besar dengan mesin digital printing A3+, mesin offset
+          Heidelberg, dan large format indoor/outdoor.</p>
+      </div>
+      <a href="#" class="text-magenta font-bold hover:underline shrink-0">Lihat Semua Produk →</a>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <!-- Item 1 -->
+      <a href="#" class="group block">
+        <div class="bg-gray-100 rounded-xl aspect-[4/3] mb-4 overflow-hidden relative">
+          <img src="assets/img/print-1.jpg" alt="Packaging"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute top-3 left-3 bg-white text-xs font-bold px-3 py-1 rounded shadow-sm">Hot Item</div>
+        </div>
+        <h3 class="font-bold text-lg text-gray-900 group-hover:text-magenta transition">Kemasan & Packaging</h3>
+        <p class="text-sm text-gray-500 mt-1">Box makanan, hardbox, pouch, paper bag dengan finishing pond & laminasi.
+        </p>
+        <div class="text-cyan font-bold text-sm mt-3">Mulai Rp 500/pcs</div>
+      </a>
+
+      <!-- Item 2 -->
+      <a href="#" class="group block">
+        <div class="bg-gray-100 rounded-xl aspect-[4/3] mb-4 overflow-hidden relative">
+          <img src="assets/img/print-2.jpg" alt="Id Card"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="font-bold text-lg text-gray-900 group-hover:text-cyan transition">Stiker & Label</h3>
+        <p class="text-sm text-gray-500 mt-1">Stiker vinyl, chromo, transparan. Print & cut sesuai pola bentuk logo
+          Anda.</p>
+        <div class="text-cyan font-bold text-sm mt-3">Mulai Rp 12.000/A3</div>
+      </a>
+
+      <!-- Item 3 -->
+      <a href="#" class="group block">
+        <div class="bg-gray-100 rounded-xl aspect-[4/3] mb-4 overflow-hidden relative">
+          <img src="assets/img/print-3.jpg" alt="Large Format"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="font-bold text-lg text-gray-900 group-hover:text-yellow-600 transition">Spanduk & Banner</h3>
+        <p class="text-sm text-gray-500 mt-1">Spanduk flexi outdoor, x-banner, roll-up banner untuk kebutuhan event &
+          promo.</p>
+        <div class="text-cyan font-bold text-sm mt-3">Mulai Rp 15.000/m²</div>
+      </a>
+
+      <!-- Item 4 -->
+      <a href="#" class="group block">
+        <div class="bg-gray-100 rounded-xl aspect-[4/3] mb-4 overflow-hidden relative">
+          <img src="assets/img/print-4.jpg" alt="Stationery"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="font-bold text-lg text-gray-900 group-hover:text-magenta transition">Corporate Stationery</h3>
+        <p class="text-sm text-gray-500 mt-1">Kartu nama VIP (emboss/poly), kop surat, amplop, ID Card PVC, dan lanyard.
+        </p>
+        <div class="text-cyan font-bold text-sm mt-3">Mulai Rp 25.000/box</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Flow ordering -->
+  <section class="py-24 bg-gray-900 text-white border-y-[12px] border-cyan">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 heading-font">Cara Order Mudah & Efisien</h2>
+        <p class="text-gray-400">Pesan dari rumah/kantor, kami urus sisanya sampai barang ada di depan pintu.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8 relative">
+        <div
+          class="hidden md:block absolute top-[28px] left-[12%] right-[12%] h-0.5 border-t border-dashed border-gray-600 z-0">
+        </div>
+
+        <div class="relative z-10 text-center">
+          <div
+            class="w-14 h-14 bg-gray-800 border-2 border-cyan rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 heading-font">
+            1</div>
+          <h4 class="font-bold text-lg mb-2">Konsultasi / Kirim File</h4>
+          <p class="text-xs text-gray-400">Kirim desain (PDF/AI/CDR) via email atau WhatsApp ke admin kami.</p>
+        </div>
+
+        <div class="relative z-10 text-center">
+          <div
+            class="w-14 h-14 bg-gray-800 border-2 border-magenta rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 heading-font">
+            2</div>
+          <h4 class="font-bold text-lg mb-2">Review & DP</h4>
+          <p class="text-xs text-gray-400">Kami cek kelayakan file resolusi cetak, lalu Anda melakukan DP pesanan.</p>
+        </div>
+
+        <div class="relative z-10 text-center">
+          <div
+            class="w-14 h-14 bg-gray-800 border-2 border-yellow-brand rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 heading-font text-gray-900">
+            3</div>
+          <h4 class="font-bold text-lg mb-2">Proses Cetak & Finishing</h4>
+          <p class="text-xs text-gray-400">Barang masuk antrean cetak, potong, laminasi, atau pond sesuai permintaan.
+          </p>
+        </div>
+
+        <div class="relative z-10 text-center">
+          <div
+            class="w-14 h-14 bg-white text-gray-900 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 heading-font shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+            4</div>
+          <h4 class="font-bold text-lg mb-2">Pelunasan & Kirim</h4>
+          <p class="text-xs text-gray-400">Barang siap dikirim menggunakan kurir instan atau cargo ke lokasi Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="max-w-4xl mx-auto px-6 py-20">
+    <div
+      class="bg-gray-100 rounded-2xl p-10 md:p-14 text-center border border-gray-200 cmyk-shadow relative bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-blend-multiply">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 heading-font">Punya file siap cetak?</h2>
+      <p class="text-gray-600 mb-8 max-w-lg mx-auto">Jangan biarkan ide desain Anda hanya tersimpan di laptop. Silakan
+        hubungi CS kami untuk mendapatkan penawaran harga terbaik.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#"
+          class="bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-8 rounded shadow-lg transition flex justify-center items-center gap-2">
+          WhatsApp Admin
+        </a>
+        <a href="#"
+          class="bg-white text-gray-800 font-bold py-3.5 px-8 rounded border-2 border-gray-300 hover:border-gray-800 transition shadow-sm">
+          Email File (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-6">
+          <div class="w-6 h-6 rounded bg-magenta flex justify-center items-center font-bold text-white text-xs">P</div>
+          <span class="font-bold tracking-tight text-gray-900 heading-font text-xl">CV XYZ PRINT</span>
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">Solusi cerdas untuk semua kebutuhan percetakan
+          bisnis, promosi pemasaran, dan perlengkapan administrasi kantor Anda.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 mb-6 uppercase tracking-wider text-xs">Informasi</h4>
+        <ul class="space-y-3 text-sm text-gray-500">
+          <li><a href="#" class="hover:text-magenta transition">Tentang Kami</a></li>
+          <li><a href="#" class="hover:text-magenta transition">Syarat & Ketentuan</a></li>
+          <li><a href="#" class="hover:text-magenta transition">Kebijakan Garansi</a></li>
+          <li><a href="#" class="hover:text-magenta transition">Lokasi Workshop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 mb-6 uppercase tracking-wider text-xs">Kontak</h4>
+        <ul class="space-y-3 text-sm text-gray-500">
+          <li>WhatsApp: 0812-3456-7890</li>
+          <li>Telp: (021) 888-9999</li>
+          <li>Email: print@cvxyz.com</li>
+          <li>Buka: Setiap Hari (08:00 - 22:00)</li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
+      <div>
+        &copy; 2026 CV XYZ Print Label. All rights reserved.
+      </div>
+      <div>
+        Theme Setup by Kalz Studio.
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-badge">
+    <div class="flex space-x-1">
+      <span class="w-2 h-2 rounded-full bg-cyan"></span>
+      <span class="w-2 h-2 rounded-full bg-magenta"></span>
+      <span class="w-2 h-2 rounded-full bg-yellow-brand"></span>
+    </div>
+    <span class="text-gray-800 ml-1">Live Theme Print Demo</span>
+  </div>
+</body>
+
+</html>
