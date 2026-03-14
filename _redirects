@@ -1,2 +1,2 @@
-# Halaman ini akan mengarahkan domain default Netlify ke domain custom
-/* https://kalzstudio.com/:splat  301!
+# Halaman ini akan mengarahkan domain default Cloudflare ke domain custom
+/* /index.html  200
