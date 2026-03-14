@@ -1,2 +1,2 @@
 # Halaman ini akan mengarahkan domain default Netlify ke domain custom
-https://kalzstudio.netlify.app/* https://kalzstudio.com/:splat 301!
+/* https://kalzstudio.com/:splat  301!
