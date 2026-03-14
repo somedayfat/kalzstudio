@@ -13,11 +13,21 @@
   <meta property="og:url" content="https://kalzstudio.com/" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- OPTIMASI 1: Preconnect Google Fonts (kurangi latency) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- OPTIMASI 2: Preload LCP image (hero-1.jpg adalah gambar pertama yang muncul) -->
+  <link rel="preload" as="image" href="assets/img/hero-1.jpg" />
+
+  <!-- OPTIMASI 3: Google Fonts dengan display=swap sudah bagus, tambah preconnect di atas sudah cukup -->
   <link
-      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-</head>
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- OPTIMASI 4: CSS non-blocking untuk above-the-fold, sisanya load async -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -99,7 +109,6 @@
   <!-- ═══ RIBBON SCROLL ═══ -->
   <section class="ribbon-section">
 
-    <!-- SVG ribbon spine -->
     <div class="big-ribbon">
       <svg viewBox="0 0 340 1200" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M170 0 C170 0, 50 150, 170 300 C290 450, 50 600, 170 750 C290 900, 50 1050, 170 1200" stroke="#c8f135"
@@ -111,7 +120,7 @@
 
     <div class="ribbon-rows">
 
-      <!-- ROW 1: right-side card -->
+      <!-- ROW 1 -->
       <div class="rrow rrow-left reveal">
         <div class="rtext">
           <div class="rt-tag">Tantangan UMKM</div>
@@ -121,15 +130,16 @@
         </div>
         <div class="rrow-spacer"></div>
         <div class="rcard reveal d2">
-          <img src="assets/img/hero-1.jpg" alt="Jasa pembuatan website bengkel Cikarang" class="rcard-img" />
+          <!-- OPTIMASI 5: width & height mencegah layout shift (CLS), loading=lazy untuk gambar below fold -->
+          <img src="assets/img/hero-1.jpg" alt="Jasa pembuatan website bengkel Cikarang" class="rcard-img"
+            width="400" height="280" loading="eager" />
           <div class="rc-title">Bisnis kamu harus ditemukan</div>
-          <p class="rc-desc" style="font-size:0.82rem">80% pelanggan mencari produk/jasa lewat Google sebelum membeli.
-          </p>
+          <p class="rc-desc" style="font-size:0.82rem">80% pelanggan mencari produk/jasa lewat Google sebelum membeli.</p>
           <span class="rc-pill rcp-l">↑ Mulai sekarang</span>
         </div>
       </div>
 
-      <!-- ROW 2: left-side card -->
+      <!-- ROW 2 -->
       <div class="rrow rrow-right reveal">
         <div class="rcard reveal d1">
           <div class="rc-num">+40%</div>
@@ -142,68 +152,52 @@
         <div class="rtext">
           <div class="rt-tag">Website</div>
           <h2 class="rt-title">Website yang benar-benar bekerja untuk bisnis kamu</h2>
-          <p class="rt-desc">Bukan sekadar tampilan cantik — website kami dirancang untuk mengubah pengunjung jadi
-            pelanggan.</p>
+          <p class="rt-desc">Bukan sekadar tampilan cantik — website kami dirancang untuk mengubah pengunjung jadi pelanggan.</p>
           <div class="rt-list">
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Mobile-first, cepat loading</span>
-            </div>
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Tombol order WhatsApp terintegrasi</span>
-            </div>
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Katalog produk yang mudah dikelola</span>
-            </div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Mobile-first, cepat loading</span></div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Tombol order WhatsApp terintegrasi</span></div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Katalog produk yang mudah dikelola</span></div>
           </div>
         </div>
       </div>
 
-      <!-- ROW 3: right-side card -->
+      <!-- ROW 3 -->
       <div class="rrow rrow-left reveal">
         <div class="rtext">
           <div class="rt-tag">Google Maps</div>
           <h2 class="rt-title">Muncul saat pelanggan mencari di sekitar mereka</h2>
-          <p class="rt-desc">Ketika seseorang mencari "bengkel terdekat" atau "toko kue cikarang bekasi" — pastikan
-            bisnis kamu yang pertama muncul.</p>
+          <p class="rt-desc">Ketika seseorang mencari "bengkel terdekat" atau "toko kue cikarang bekasi" — pastikan bisnis kamu yang pertama muncul.</p>
           <div class="rt-list">
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Google Business Profile dioptimasi penuh</span>
-            </div>
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Strategi mendapatkan review positif</span>
-            </div>
-            <div class="rtl-item">
-              <div class="rtl-dot">✓</div><span>Keyword lokal yang tepat sasaran</span>
-            </div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Google Business Profile dioptimasi penuh</span></div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Strategi mendapatkan review positif</span></div>
+            <div class="rtl-item"><div class="rtl-dot">✓</div><span>Keyword lokal yang tepat sasaran</span></div>
           </div>
         </div>
         <div class="rrow-spacer"></div>
         <div class="rcard reveal d2">
-          <img src="assets/img/hero-2.jpg" alt="Optimasi Google Maps Cikarang" class="rcard-img" />
+          <img src="assets/img/hero-2.jpg" alt="Optimasi Google Maps Cikarang" class="rcard-img"
+            width="400" height="280" loading="lazy" />
           <div class="rc-title">Top 3 Pencarian Lokal</div>
-          <p class="rc-desc" style="font-size:0.82rem">Percetakan lokal di Cikarang berhasil masuk Top 3 Google — jadi
-            pilihan utama perusahaan-perusahaan kawasan industri yang butuh cetak cepat.</p>
+          <p class="rc-desc" style="font-size:0.82rem">Percetakan lokal di Cikarang berhasil masuk Top 3 Google — jadi pilihan utama perusahaan-perusahaan kawasan industri.</p>
           <span class="rc-pill rcp-b">↑ Top 3 lokal</span>
         </div>
       </div>
 
-      <!-- ROW 4: left-side card -->
+      <!-- ROW 4 -->
       <div class="rrow rrow-right reveal">
         <div class="rcard reveal d1">
-          <img src="assets/img/hero-3.jpg" alt="Jasa pembuatan company profile kontraktor Bekasi" class="rcard-img" />
+          <img src="assets/img/hero-3.jpg" alt="Jasa pembuatan company profile kontraktor Bekasi" class="rcard-img"
+            width="400" height="280" loading="lazy" />
           <div class="rc-title">Brand yang tak terlupakan</div>
-          <p class="rc-desc">Identitas visual yang konsisten membangun kepercayaan dan membuat bisnis kamu mudah
-            diingat.</p>
+          <p class="rc-desc">Identitas visual yang konsisten membangun kepercayaan dan membuat bisnis kamu mudah diingat.</p>
           <span class="rc-pill rcp-o">↑ Awereness Meningkat</span>
         </div>
         <div class="rrow-spacer"></div>
         <div class="rtext">
           <div class="rt-tag">Branding</div>
           <h2 class="rt-title">Satu identitas, semua platform, satu kesan</h2>
-          <p class="rt-desc">Logo, warna, dan cara bicaramu harus konsisten di mana saja — dari Instagram hingga kemasan
-            produk.</p>
-          <a href="#kontak" class="btn-ink"
-            style="display:inline-flex;align-items:center;gap:8px;margin-top:8px">Diskusi branding →</a>
+          <p class="rt-desc">Logo, warna, dan cara bicaramu harus konsisten di mana saja — dari Instagram hingga kemasan produk.</p>
+          <a href="#kontak" class="btn-ink" style="display:inline-flex;align-items:center;gap:8px;margin-top:8px">Diskusi branding →</a>
         </div>
       </div>
 
@@ -213,8 +207,7 @@
   <!-- ═══ READY ═══ -->
   <section class="ready-section">
     <h2 class="ready-title">Siap ketika<br><span class="outline">kamu siap!</span></h2>
-    <p class="ready-sub">Konsultasi pertama gratis. Tidak perlu langsung deal — ceritakan dulu, kita diskusi bersama.
-    </p>
+    <p class="ready-sub">Konsultasi pertama gratis. Tidak perlu langsung deal — ceritakan dulu, kita diskusi bersama.</p>
     <div class="ready-btns">
       <a href="#kontak" class="btn-ink">Mulai Konsultasi →</a>
     </div>
@@ -226,18 +219,14 @@
       <div class="collage-header">
         <div class="collage-header-grid">
           <div class="reveal">
-            <div
-              style="font-size:0.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px;display:flex;align-items:center;gap:8px">
+            <div style="font-size:0.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px;display:flex;align-items:center;gap:8px">
               <span style="width:20px;height:2px;background:var(--lime);display:inline-block"></span>Live Preview
             </div>
-            <h2
-              style="font-family:'Unbounded',sans-serif;font-size:clamp(2rem,3.8vw,3.2rem);font-weight:900;letter-spacing:-0.04em;line-height:1.05">
+            <h2 style="font-family:'Unbounded',sans-serif;font-size:clamp(2rem,3.8vw,3.2rem);font-weight:900;letter-spacing:-0.04em;line-height:1.05">
               Dari Ide ke Website, Temukan Inspirasinya!</h2>
           </div>
           <div class="reveal d1">
-            <p style="font-size:0.95rem;color:var(--ink-2);line-height:1.75;margin-bottom:24px">Website bukan sekadar
-              tampilan — ini adalah sales tool yang bekerja 24 jam untuk bisnis Anda. Kami bantu wujudkan, dari konsep
-              hingga tayang. Lihat contoh hasilnya di bawah.</p>
+            <p style="font-size:0.95rem;color:var(--ink-2);line-height:1.75;margin-bottom:24px">Website bukan sekadar tampilan — ini adalah sales tool yang bekerja 24 jam untuk bisnis Anda. Kami bantu wujudkan, dari konsep hingga tayang.</p>
             <a href="#kontak" class="btn-lime">Mulai Konsultasi →</a>
           </div>
         </div>
@@ -245,57 +234,45 @@
 
       <div class="collage-grid reveal">
         <a href="sample-1.html" target="_blank" class="cg-photo">
-          <img src="assets/img/ac-hero.jpg" alt="Theme Jasa AC" />
+          <img src="assets/img/ac-hero.jpg" alt="Theme Jasa AC" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">Jasa Service</span>
-          <div class="cg-title">CV XYZ AC<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Jasa Cuci & Service AC</span></div>
+          <div class="cg-title">CV XYZ AC<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Jasa Cuci & Service AC</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
         <a href="sample-2.html" target="_blank" class="cg-photo">
-          <img src="assets/img/b2b-hero.jpg" alt="Theme Supplier Konstruksi" />
+          <img src="assets/img/b2b-hero.jpg" alt="Theme Supplier Konstruksi" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">B2B Supplier</span>
-          <div class="cg-title">TB XYZ Supplier<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Supplier Bahan Bangunan</span></div>
+          <div class="cg-title">TB XYZ Supplier<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Supplier Bahan Bangunan</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
         <a href="sample-3.html" target="_blank" class="cg-photo">
-          <img src="assets/img/print-hero.jpg" alt="Theme Percetakan" />
+          <img src="assets/img/print-hero.jpg" alt="Theme Percetakan" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">Percetakan</span>
-          <div class="cg-title">CV XYZ Print<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Jasa Digital Printing</span></div>
+          <div class="cg-title">CV XYZ Print<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Jasa Digital Printing</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
         <a href="sample-4.html" target="_blank" class="cg-photo">
-          <img src="assets/img/corp_hero.jpg" alt="Theme Corporate" />
+          <img src="assets/img/corp_hero.jpg" alt="Theme Corporate" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">Corporate</span>
-          <div class="cg-title">PT XYZ Corp<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Corporate General</span></div>
+          <div class="cg-title">PT XYZ Corp<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Corporate General</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
         <a href="sample-5.html" target="_blank" class="cg-photo">
-          <img src="assets/img/umkm_hero.jpg" alt="Theme UMKM Go Digital" />
+          <img src="assets/img/umkm_hero.jpg" alt="Theme UMKM Go Digital" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">UMKM</span>
-          <div class="cg-title">Usaha UMKM<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Go Digital UMKM</span></div>
+          <div class="cg-title">Usaha UMKM<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Go Digital UMKM</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
         <a href="sample-6.html" target="_blank" class="cg-photo">
-          <img src="assets/img/farm-hero.jpg" alt="Theme Pertanian B2B" />
+          <img src="assets/img/farm-hero.jpg" alt="Theme Pertanian B2B" width="600" height="400" loading="lazy" />
           <div class="cg-photo-overlay"></div>
           <span class="cg-tag">Agribisnis</span>
-          <div class="cg-title">Bumi Tani Mandiri<br><span
-              style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme
-              Suplier Hasil Bumi B2B</span></div>
+          <div class="cg-title">Bumi Tani Mandiri<br><span style="font-size:0.8rem;font-weight:500;font-family:'Nunito',sans-serif;opacity:0.8;display:block;margin-top:6px">Theme Suplier Hasil Bumi B2B</span></div>
           <div class="cg-preview-btn">Live Preview ↗</div>
         </a>
       </div>
@@ -308,30 +285,19 @@
       <div class="nb-left reveal">
         <div class="section-tag">Dampak Nyata</div>
         <h2 class="nb-title">Angka yang berbicara sendiri</h2>
-        <p class="nb-desc">Setiap project kami ukur hasilnya. Bukan sekadar klaim — data nyata dari klien yang sudah
-          kami bantu.</p>
+        <p class="nb-desc">Setiap project kami ukur hasilnya. Bukan sekadar klaim — data nyata dari klien yang sudah kami bantu.</p>
         <div style="display:flex;flex-direction:column;gap:16px">
-          <div
-            style="display:flex;align-items:center;gap:16px;background:var(--white);border-radius:16px;padding:18px 20px;border:1.5px solid rgba(0,0,0,.06)">
-            <div
-              style="width:44px;height:44px;border-radius:12px;background:var(--lime);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">
-              📍</div>
+          <div style="display:flex;align-items:center;gap:16px;background:var(--white);border-radius:16px;padding:18px 20px;border:1.5px solid rgba(0,0,0,.06)">
+            <div style="width:44px;height:44px;border-radius:12px;background:var(--lime);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">📍</div>
             <div>
-              <div
-                style="font-family:'Unbounded',sans-serif;font-size:0.88rem;font-weight:800;color:var(--ink);margin-bottom:2px">
-                Top 3 Google Maps</div>
+              <div style="font-family:'Unbounded',sans-serif;font-size:0.88rem;font-weight:800;color:var(--ink);margin-bottom:2px">Top 3 Google Maps</div>
               <div style="font-size:0.78rem;color:var(--ink-3)">Klinik Medika Jababeka, setelah 3 bulan</div>
             </div>
           </div>
-          <div
-            style="display:flex;align-items:center;gap:16px;background:var(--white);border-radius:16px;padding:18px 20px;border:1.5px solid rgba(0,0,0,.06)">
-            <div
-              style="width:44px;height:44px;border-radius:12px;background:#ddf8ed;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">
-              🔍</div>
+          <div style="display:flex;align-items:center;gap:16px;background:var(--white);border-radius:16px;padding:18px 20px;border:1.5px solid rgba(0,0,0,.06)">
+            <div style="width:44px;height:44px;border-radius:12px;background:#ddf8ed;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">🔍</div>
             <div>
-              <div
-                style="font-family:'Unbounded',sans-serif;font-size:0.88rem;font-weight:800;color:var(--ink);margin-bottom:2px">
-                Halaman 1 Google</div>
+              <div style="font-family:'Unbounded',sans-serif;font-size:0.88rem;font-weight:800;color:var(--ink);margin-bottom:2px">Halaman 1 Google</div>
               <div style="font-size:0.78rem;color:var(--ink-3)">PT. Konstruksi Baja Cikarang, dalam 3 bulan SEO</div>
             </div>
           </div>
@@ -339,15 +305,12 @@
       </div>
       <div class="reveal d1">
         <div class="nb-big-card">
-          <div
-            style="font-size:0.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px">
-            Rata-rata hasil klien</div>
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px">Rata-rata hasil klien</div>
           <div class="nb-num">40<span class="nb-unit">%+</span></div>
           <div style="height:4px;background:rgba(255,255,255,.2);border-radius:100px;margin:16px 0">
             <div style="height:100%;width:75%;background:white;border-radius:100px"></div>
           </div>
-          <p class="nb-caption">Peningkatan order dalam 60 hari pertama setelah website live dan Google Maps dioptimasi.
-          </p>
+          <p class="nb-caption">Peningkatan order dalam 60 hari pertama setelah website live dan Google Maps dioptimasi.</p>
           <div style="display:flex;gap:12px;margin-top:20px">
             <div style="flex:1;background:rgba(255,255,255,.15);border-radius:12px;padding:12px;text-align:center">
               <div style="font-family:'Unbounded',sans-serif;font-size:1.2rem;font-weight:800;color:white">10+</div>
@@ -376,8 +339,7 @@
           <div class="sv-num">01</div>
           <span class="sv-icon">🌐</span>
           <div class="sv-name">Pembuatan Website</div>
-          <p class="sv-desc">Website cepat, mobile-friendly, dan mencerminkan identitas bisnis kamu. Landing page hingga
-            toko online.</p>
+          <p class="sv-desc">Website cepat, mobile-friendly, dan mencerminkan identitas bisnis kamu. Landing page hingga toko online.</p>
           <span class="sv-pill sp-l">↑ Paling diminati</span>
         </div>
         <div class="sv reveal d1">
@@ -385,8 +347,7 @@
           <div class="sv-num">02</div>
           <span class="sv-icon">📍</span>
           <div class="sv-name">Optimasi Google Maps</div>
-          <p class="sv-desc">Google Business Profile lengkap agar bisnis muncul saat orang mencari di sekitar mereka.
-          </p>
+          <p class="sv-desc">Google Business Profile lengkap agar bisnis muncul saat orang mencari di sekitar mereka.</p>
           <span class="sv-pill sp-b">↑ Top 3 lokal</span>
         </div>
         <div class="sv reveal d2">
@@ -418,8 +379,7 @@
           <div class="sv-num">06</div>
           <span class="sv-icon">🛠️</span>
           <div class="sv-name">Maintenance & IT Support</div>
-          <p class="sv-desc">Bukan cuma website. Jaringan, server, CCTV, hingga email bisnis — satu tim untuk semua
-            kebutuhan digital kamu.</p>
+          <p class="sv-desc">Bukan cuma website. Jaringan, server, CCTV, hingga email bisnis — satu tim untuk semua kebutuhan digital kamu.</p>
           <span class="sv-pill sp-l">↑ Tenang, ada kami</span>
         </div>
       </div>
@@ -455,8 +415,7 @@
           <div class="pg-num">01</div>
           <div class="pg-icon">💬</div>
           <div class="pg-title">Konsultasi Gratis</div>
-          <p class="pg-desc">Ceritakan bisnis dan tantangan digital kamu. Kita diskusi bareng — tanpa tekanan, tanpa
-            biaya.</p>
+          <p class="pg-desc">Ceritakan bisnis dan tantangan digital kamu. Kita diskusi bareng — tanpa tekanan, tanpa biaya.</p>
         </div>
         <div class="pg reveal d1">
           <div class="pg-line"></div>
@@ -492,14 +451,12 @@
         bisnis kamu<br>
         <span class="lime-bg-cta">bersama kami</span>
       </h2>
-      <p class="cta-desc">Konsultasi pertama gratis. Tidak perlu langsung deal — ceritakan bisnis kamu dan kami bantu
-        tentukan langkah digitalnya.</p>
+      <p class="cta-desc">Konsultasi pertama gratis. Tidak perlu langsung deal — ceritakan bisnis kamu dan kami bantu tentukan langkah digitalnya.</p>
       <div class="cta-btns">
         <a href="https://wa.me/6288291388653?text=Halo%20Kalz%20Studio%2C%20saya%20ingin%20konsultasi%20gratis"
           target="_blank" class="btn-ink">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
           Chat WhatsApp
         </a>
@@ -533,7 +490,8 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- OPTIMASI 6: defer script.js agar tidak blocking render -->
+  <script src="script.js" defer></script>
 </body>
 
 </html>
