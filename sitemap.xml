@@ -4,28 +4,4 @@
     <loc>https://kalzstudio.com/</loc>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-1.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-2.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-3.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-4.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-5.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kalzstudio.com/sample-6.html</loc>
-    <priority>0.8</priority>
-  </url>
 </urlset>
